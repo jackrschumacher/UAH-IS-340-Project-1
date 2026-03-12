@@ -1,4 +1,4 @@
-USE HAFWITH 
+USE HAFH
 
 -- Create inspector table
 CREATE TABLE inspector(

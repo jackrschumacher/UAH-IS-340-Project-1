@@ -25,3 +25,16 @@
 - [ ] Display the `ManagerID`, `MFName`, `MLName`, `MSalary`, and `MBonus `for the manager with the *lowest* total compensation (defined as salary plus bonus) **5 points**
 - [ ] Provide all SQL queries and the screenshots
 
+### Setup
+
+Create Tables:
+
+- [x] INSPECTOR
+- [ ] BUILDING
+- [ ] APARTMENT
+- [ ] INSPECTING
+- [ ] CLEANING
+- [ ] MANAGER
+- [ ] CORPCLIENT
+- [ ] MANAGERPHONE
+- [ ] STAFFMEMEMBER

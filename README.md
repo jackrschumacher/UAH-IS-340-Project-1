@@ -30,11 +30,11 @@
 #### Create Tables:
 
 - [x] INSPECTOR
-- [ ] BUILDING
+- [x] BUILDING
 - [ ] APARTMENT
-- [ ] INSPECTING
+- [x] INSPECTING
 - [ ] CLEANING
-- [ ] MANAGER
+- [x] MANAGER
 - [ ] CORPCLIENT
 - [ ] MANAGERPHONE
 - [ ] STAFFMEMEMBER

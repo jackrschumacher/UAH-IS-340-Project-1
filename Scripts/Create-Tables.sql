@@ -36,8 +36,7 @@ InsID char(3) NOT NULL,
 BuildingID char(3) NOT NULL,
 DateNext DATE NOT NULL,
 DateLast DATE NOT NULL,
-PRIMARY KEY (InsID)
-);
+PRIMARY KEY (InsID));
 
 -- Create the staffmember table
 CREATE TABLE staffmember(
@@ -62,8 +61,13 @@ AptNo char(5) NOT NULL,
 
 -- Create the corpclient table
 CREATE TABLE corpclient(
-
-)
+CCID char(4) NOT NULL,
+CCName varchar(25) UNIQUE,
+CCIndustry varchar(25) NOT NULL,
+CCLocation varchar(25) NOT NULL,
+CCIDReferredBy char(4) NULL,
+PRIMARY KEY(CCID),
+FOREIGN KEY (CCIDReferredBy) REFERENCES corpclient(CCID));
 
 -- Alter tables to allow for insertion of FKs when there are circular dependencies
 ALTER TABLE inspecting
@@ -78,5 +82,6 @@ ADD FOREIGN KEY (BManagerID) REFERENCES manager(ManagerID);
 
 ALTER TABLE apartment
 ADD FOREIGN KEY (BuildingID) REFERENCES building(BuildingID);
---ADD FOREIGN KEY (CCID) REFERENCES corpclient(CCID);
+ADD FOREIGN KEY (CCID) REFERENCES corpclient(CCID);
+
 

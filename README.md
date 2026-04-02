@@ -9,9 +9,9 @@
 > (including SQL codes and screenshots) may result in significant points deduction.
 
 - [ ] All SQL queries for the `HAFH reality database`. This includes queries for creating the database, tables data loading (insert query), and then the queries showing the content of every table (e.g., show table Manager, the number of columns it has, and the instances showing the data, i.e., number of rows and columns in the table-see sample screenshot) **(30 points)**
-- [ ] Screenshots after running SQL query to extract all the columns from tables. There are nine tables, so there should be nine screenshots. Requirements for screenshots:
-  - [ ] One screenshot for one table- **all 9** **(5*9 = 45 points)**
-    - [ ] Show all columns in the tables **(5*9 = 45 points)**
+- [x] Screenshots after running SQL query to extract all the columns from tables. There are nine tables, so there should be nine screenshots. Requirements for screenshots:
+  - [x] One screenshot for one table- **all 9** **(5*9 = 45 points)**
+    - [x] Show all columns in the tables **(5*9 = 45 points)**
   - The bottom of the screenshot shall show the following information:
     - Your local instance of the database engine
     - Number of rows in the table. (note: if a table has many rows that cannot be displayed in one screen, you dont need to show those rows that are not displayed in the first page. Just take the screenshot of the first page and show the number of rows at the bottom of the screenshot. That is good enough).

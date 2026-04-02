@@ -60,3 +60,21 @@ FIELDTERMINATOR = ',',
 ROWTERMINATOR = '\n',
 FIRSTROW = 2,
 TABLOCK);
+
+-- Insert data from .csv into the manager table
+BULK INSERT manager
+FROM "C:\Users\jackr\Documents\UAH\UAH-IS-340-Project-1\Data\manager.csv"
+WITH (
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '\n',
+FIRSTROW = 2,
+TABLOCK);
+
+-- Insert data from .csv into the corpclient table
+BULK INSERT corpclient
+FROM "C:\Users\jackr\Documents\UAH\UAH-IS-340-Project-1\Data\corpclient.csv"
+WITH (
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '\n',
+FIRSTROW = 2,
+TABLOCK);

@@ -49,4 +49,7 @@ FULL OUTER JOIN
 WHERE
 	DateNext > '2020-04-01';
 
--- Display the ManagerID, MFName, MLName, MSalary, and MBonusfor the manager with the lowest total compensation (defined as salary plus bonus)
+-- Display the ManagerID, MFName, MLName, MSalary, and MBonusfor the manager with the lowest total compensation (defined as salary plus bonus) - create an alias to show totalCompensation
+SELECT ManagerID , MFName, MLName, MSalary, MBonus, (MSalary + MBonus) as TotalCompensation
+FROM manager
+WHERE (MSalary + MBonus) = (SELECT MIN(MSalary + MBonus) FROM manager);

@@ -10,7 +10,7 @@ SELECT ManagerID, MFName, MLName, MSalary, MBonus
 FROM manager
 WHERE MSalary > 50000 AND MBonus > 1000;
 
--- Display the BuildingID, BNoOfFloors, managers MFName and MLName for all buildings. Shows all buildingIDs, will return nulls in right table if found
+-- Display the BuildingID, BNoOfFloors, managers MFName and MLName for all buildings. 
 SELECT 
 	building.BuildingID,
 	building.BNoOfFloors,
@@ -29,7 +29,7 @@ SELECT
 	apartment.AptNo
 FROM
 	apartment
-LEFT OUTER JOIN
+JOIN
 	corpclient 
 	ON
 	apartment.CCID = corpclient.CCID
@@ -42,14 +42,17 @@ SELECT DISTINCT
 	inspector.InsName
 FROM
 	inspector
-FULL OUTER JOIN
+JOIN
 	inspecting
 	ON
 	inspector.InsID = inspecting.InsID
 WHERE
 	DateNext > '2020-04-01';
 
--- Display the ManagerID, MFName, MLName, MSalary, and MBonusfor the manager with the lowest total compensation (defined as salary plus bonus) - create an alias to show totalCompensation
-SELECT ManagerID , MFName, MLName, MSalary, MBonus, (MSalary + MBonus) as TotalCompensation
+/* Display the ManagerID, MFName, MLName, MSalary, and MBonusfor the manager with the lowest total compensation (defined as salary plus bonus)
+ * Create an alias to show totalCompensation. Used ISNULL to prevent nulling out of TotalCompensation if there is a null value in the bonus column.
+ */
+SELECT ManagerID , MFName, MLName, MSalary, MBonus, (MSalary + ISNULL(MBonus,0)) as TotalCompensation
 FROM manager
-WHERE (MSalary + MBonus) = (SELECT MIN(MSalary + MBonus) FROM manager);
+WHERE (MSalary + ISNULL(MBonus,0)) = (SELECT MIN(MSalary + ISNULL(MBonus,0)) FROM manager);
+
